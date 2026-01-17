@@ -203,7 +203,7 @@ address {
 .formats-list {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .formats-item {
