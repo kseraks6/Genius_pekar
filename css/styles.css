@@ -8,7 +8,6 @@
 }
 
 /* base */
-*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -373,22 +372,14 @@ address {
   gap: 32px;
 }
 
-.contact-form {
-  flex-basis: 50%;
-}
-
 .contact-title {
   margin-bottom: 16px;
-}
-
-.contact-title-nowrap {
-  white-space: nowrap;
 }
 
 .contact-map {
   flex-shrink: 0;
   border: none;
-  border-radius: 16px;
+  border-radius: 16 px;
 }
 
 /* footer */
@@ -500,51 +491,15 @@ address {
   position: absolute;
   top: 40px;
   right: 40px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  line-height: 0;
-  color: var(--color-primary-dark);
-}
-
-.modal-btn-close:hover {
-  color: var(--color-brand-normal);
-}
-
-.modal-title {
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.modal-text {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 48px;
-}
-
-.modal-decor {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  pointer-events: none;
 }
 
 /* form */
 .form-field {
-  position: relative;
   margin-bottom: 32px;
 }
 
 .form-label {
-  position: absolute;
-  top: 16px;
-  left: 42px;
-  color: var(--color-secondary-dark);
+  display: block;
 }
 
 .form-input {
@@ -556,8 +511,7 @@ address {
 }
 
 .form-input:focus {
-  border: 1px solid var(--color-brand-normal);
-  outline: none;
+  border-color: var(--color-brand-normal);
 }
 
 .form-input::placeholder {
@@ -572,13 +526,13 @@ address {
 
 .form-button {
   display: block;
-  margin: 0 auto 24px;
+  margin: 0 auto;
 }
 
 .form-terms {
   margin: 0 auto;
-  max-width: 210px;
-  font-weight: 500px;
+  max-width: 220px;
+  font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
