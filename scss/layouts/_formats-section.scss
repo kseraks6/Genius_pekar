@@ -1,0 +1,26 @@
+.formats-section {
+  padding: 96px 0;
+  background-image: url('../images/formats_section_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 40px) / 3);
+  }
+}
