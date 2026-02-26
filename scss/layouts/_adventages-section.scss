@@ -1,17 +1,39 @@
+@use '../utils/variables' as *;
+
 .advantages-section {
-  padding: 16px 0;
-  background-color: var(--color-brand-normal);
+  padding: 20px 0;
+
+  @media screen and (min-width: $br-desktop) {
+    padding: 0;
+    background-color: var(--color-brand-normal);
+  }
 
   &__list {
-    color: var(--color-primary-light);
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    padding: 16px 40px;
+    gap: 16px;
+    background-color: var(--color-brand-light);
+    border-radius: 8px;
+    color: var(--color-primary-dark);
+
+    @media screen and (min-width: $br-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      background-color: transparent;
+      padding: 16px 0;
+      border-radius: 0;
+      color: var(--color-primary-light);
+    }
   }
 
   &__item {
-    font-weight: 20px;
-    line-height: 1.5;
+    font-size: 14px;
     font-weight: 300;
+
+    @media screen and (min-width: $br-desktop) {
+      font-size: 20px;
+    }
   }
 }

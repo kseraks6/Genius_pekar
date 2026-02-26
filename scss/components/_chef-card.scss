@@ -1,9 +1,24 @@
+@use '../utils/variables' as *;
+
 .chef-card {
   display: flex;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 16px;
+  @media screen and (min-width: $br-desktop) {
+    gap: 30px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+  }
 
   &__text p {
+    font-size: 14px;
     margin-bottom: 24px;
+    @media screen and (min-width: $br-desktop) {
+      font-size: 18px;
+    }
   }
 
   &__text p:last-child {
@@ -11,15 +26,23 @@
   }
 
   &__photo {
+    width: 140px;
     border-radius: 4px 4px 4px 200px;
     box-shadow:
       -16px 16px 0 0 var(--color-primary-light),
       -16px 16px 0 2px var(--color-secondary-dark);
+
+    @media screen and (min-width: $br-desktop) {
+      width: 240px;
+    }
   }
 
   &__title {
     margin-bottom: 16px;
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 600;
+    @media screen and (min-width: $br-desktop) {
+      font-size: 40px;
+    }
   }
 }

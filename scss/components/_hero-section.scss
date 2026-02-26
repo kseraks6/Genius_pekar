@@ -1,5 +1,7 @@
+@use '../utils/variables' as *;
+
 .hero-section {
-  padding: 272px 0px;
+  padding: 124px 0;
   background-image:
     linear-gradient(
       102.76deg,
@@ -12,13 +14,43 @@
   background-position: center top;
   background-size: cover;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(
+        102.76deg,
+        rgba(18, 18, 17, 0.78) 2.03%,
+        rgba(18, 18, 17, 0.6) 58.46%,
+        rgba(18, 18, 17, 0) 90.36%
+      ),
+      url('../images/hero_section_background@2.jpg');
+  }
+
+  @media screen and (min-width: $br-desktop) {
+    padding: 272px 0;
+  }
+
   &__title {
+    margin-bottom: 32px;
     color: var(--color-primary-light);
     text-align: center;
-    font-size: 128px;
+    font-size: 67px;
+    line-height: 1;
     font-weight: 900;
+
+    @media screen and (min-width: $br-desktop) {
+      font-size: 128px;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
   }
-}
-.text-brand {
-  color: var(--color-brand-normal);
+
+  &__button {
+    margin: 0 auto;
+
+    @media screen and (min-width: $br-desktop) {
+      display: none;
+    }
+  }
 }

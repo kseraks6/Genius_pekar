@@ -1,6 +1,7 @@
 .carousel-button {
-  display: flex;
   align-items: center;
+  display: flex;
+  text-align: center;
   justify-content: center;
   flex-shrink: 0;
   width: 44px;
@@ -10,29 +11,18 @@
   border-radius: 50%;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   transition:
     transform 0.3s,
     background-color 0.3s;
-}
 
-.carousel-arrow {
-  fill: var(--color-primary-dark);
-  transition: fill 0.3s;
-}
+  &:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+  }
 
-.carousel-button:hover {
-  background-color: var(--color-primary-dark);
-}
-
-.carousel-button:hover,
-.carousel-button.next:hover {
-  transform: scale(1.1);
-}
-
-.carousel-button.next {
-  transform: rotate(180deg);
-}
-
-.carousel-button:hover .carousel-arrow {
-  fill: var(--color-primary-light);
+  &.next {
+    transform: rotate(180deg);
+  }
 }

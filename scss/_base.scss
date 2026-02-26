@@ -1,3 +1,6 @@
+@use 'utils/variables' as *;
+
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -9,14 +12,25 @@ ul {
   padding: 0;
 }
 
+Img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 body {
   color: var(--color-primary-dark);
   background-color: var(--color-primary-light);
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
+
+  @media screen and (min-width: $br-desktop) {
+    font-weight: 400;
+  }
 }
 
 a {
@@ -41,4 +55,5 @@ address {
   max-width: 1288px;
   margin: auto;
   padding: 24px;
+  padding-bottom: 0px;
 }

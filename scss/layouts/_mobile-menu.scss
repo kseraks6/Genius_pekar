@@ -1,0 +1,72 @@
+@use '../utils/variables' as *;
+.mobile-menu {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0; // було: left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: var(--color-primary-light);
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+
+  @media screen and (min-width: $br-tablet) {
+    width: 25%;
+    height: 100%;
+    transform: translateX(100%);
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-primary-dark);
+    transition: 0.3s;
+    text-decoration: none;
+    padding: 16px 24px;
+  }
+
+  &__link:hover {
+    color: var(--color-brand-normal);
+    font-weight: 600;
+  }
+
+  &__logo {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+
+  &__cancel_buton {
+    color: var(--color-primary-dark);
+    stroke: currentColor;
+    fill: none;
+    width: 24px;
+    height: 24px;
+    display: block;
+    overflow: visible;
+  }
+
+  &__cancel_buton:hover {
+    stroke: var(--color-brand-normal);
+  }
+
+  &__bread {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 106px;
+    height: 224px;
+  }
+}

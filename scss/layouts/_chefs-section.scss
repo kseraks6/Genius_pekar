@@ -1,8 +1,13 @@
+@use '../utils/variables' as *;
+
 .chefs-section {
   &__title {
-    margin: 0 auto 80px;
+    margin: 0 auto 24px;
     position: relative;
     text-align: center;
+    @media screen and (min-width: $br-desktop) {
+      margin: 80px;
+    }
 
     &::before,
     &::after {
@@ -16,21 +21,36 @@
     }
 
     &::before {
-      left: 0px;
+      left: -100;
+      bottom: 27px;
+      @media screen and (max-width: $br-desktop) {
+        display: none;
+      }
     }
 
     &::after {
-      right: 0px;
+      right: -100px;
+      bottom: 27px;
+      @media screen and (max-width: $br-desktop) {
+        display: none;
+      }
     }
   }
 
   &__list {
     display: flex;
-    gap: 40px 30px;
+    flex-direction: column;
+    gap: 25px;
     flex-wrap: wrap;
+    @media screen and (min-width: $br-tablet) {
+      gap: 40px 30px;
+      flex-direction: row;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 30px) / 2);
+    @media screen and (min-width: $br-tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
 }

@@ -1,14 +1,28 @@
+@use '../utils/variables' as *;
+
 .header {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 32px;
+  padding-top: 16px;
   width: 100%;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px;
+    @media screen and (max-width: ($br-desktop - 1)) {
+      top: 16px;
+      left: 20px;
+      position: absolute;
+    }
+  }
 
   &__container {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
   }
 
   &__menu {
@@ -23,5 +37,32 @@
     align-items: center;
     flex-grow: 1;
     gap: 40px;
+    @media screen and (max-width: ($br-desktop - 1)) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: ($br-desktop - 1)) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-primary-light);
+    top: 16px;
+    right: 16px;
+    position: absolute;
+
+    @media screen and (min-width: $br-desktop) {
+      display: none;
+    }
   }
 }
